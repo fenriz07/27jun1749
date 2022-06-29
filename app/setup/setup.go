@@ -1,7 +1,11 @@
 package setup
 
 import (
+	"reflect"
+	"strings"
+
 	"github.com/fenriz07/27jun1749/app/config"
+	"github.com/go-playground/validator/v10"
 	"github.com/gogearbox/gearbox"
 )
 
@@ -16,12 +20,12 @@ func Setup() gearbox.Gearbox {
 
 func SetInterface(gb gearbox.Gearbox, listUseCase usesCases) {
 
-	setEndpoints(gb, listUseCase)
+	v := validatorsRegistry()
+
+	setEndpoints(gb, v, listUseCase)
 }
 
-/*
-
-func ValidatorsRegistry() *validator.Validate {
+func validatorsRegistry() *validator.Validate {
 
 	validate := validator.New()
 
@@ -34,31 +38,5 @@ func ValidatorsRegistry() *validator.Validate {
 		return name
 	})
 
-	validate.RegisterValidation("cmref", ValidateCmRef)
-
 	return validate
 }
-
-func ValidateCmRef(fl validator.FieldLevel) bool {
-
-	field := fl.Field()
-	var v string
-
-	switch field.Kind() {
-	case reflect.String:
-		v = field.String()
-	default:
-		return false
-	}
-
-	listCmRefAllowed := config.ListCmRefAllowed()
-
-	for _, cmref := range listCmRefAllowed {
-		if cmref == v {
-			return true
-		}
-	}
-
-	return false
-}
-*/

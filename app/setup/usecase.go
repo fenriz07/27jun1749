@@ -12,6 +12,7 @@ func NewUsesCases() usesCases {
 
 	saveLinkUseCase := usecase.SaveLink{
 		CreateLink: i.PostgresRepository.CreateLink,
+		FindLink:   i.PostgresRepository.FindLink,
 	}
 
 	return usesCases{

@@ -4,6 +4,7 @@ import (
 	"time"
 
 	"github.com/fenriz07/27jun1749/app/interface/rest"
+	"github.com/go-playground/validator/v10"
 	"github.com/gogearbox/gearbox"
 )
 
@@ -19,7 +20,7 @@ func gearBox() gearbox.Gearbox {
 	return gb
 }
 
-func setEndpoints(gb gearbox.Gearbox, listUseCase usesCases) {
+func setEndpoints(gb gearbox.Gearbox, v *validator.Validate, listUseCase usesCases) {
 
-	rest.NewCreateShortUrlHandler(gb, listUseCase.Launch)
+	rest.NewCreateShortUrlHandler(gb, v, listUseCase.Launch)
 }
