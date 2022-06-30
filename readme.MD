@@ -25,6 +25,9 @@ http://localhost:8080/{code} for example this code f2a13dbb (http://localhost:80
 
 # Steps to running the service
 
+## clone this repo
+## in the file .env set the var database.postgres.hostName = (the ip that was sent to you)
+
 ## Build the service's container image:
 docker build -t yourbuildname .
 
