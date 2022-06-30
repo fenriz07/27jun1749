@@ -23,7 +23,6 @@ func NewCreateShortUrlHandler(gb gearbox.Gearbox, validator *validator.Validate,
 	}
 
 	gb.Post(BASE_PATH, h.CreateShortUrl)
-
 }
 
 func (h *CreateShortHandler) CreateShortUrl(ctx gearbox.Context) {
@@ -70,7 +69,7 @@ func (h *CreateShortHandler) CreateShortUrl(ctx gearbox.Context) {
 
 	}
 
-	ctx.Status(gearbox.StatusOK).SendJSON(response.LinkResponse{
+	ctx.Status(gearbox.StatusCreated).SendJSON(response.LinkResponse{
 		Url:  linkResult.ID,
 		Code: linkResult.Code,
 	})

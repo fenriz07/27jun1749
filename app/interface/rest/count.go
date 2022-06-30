@@ -9,24 +9,24 @@ import (
 	"github.com/gogearbox/gearbox"
 )
 
-type FindShortHandler struct {
-	usecase.FindLinkUseCase
+type CountRedirectShortHandler struct {
+	usecase.CountLinkUseCase
 }
 
-func NewFindShortUrlHandler(gb gearbox.Gearbox, u usecase.FindLinkUseCase) {
+func NewCountRedirectUrlHandler(gb gearbox.Gearbox, u usecase.CountLinkUseCase) {
 
-	h := &FindShortHandler{
-		FindLinkUseCase: u,
+	h := &CountRedirectShortHandler{
+		CountLinkUseCase: u,
 	}
 
-	gb.Get(BASE_PATH+":code", h.Find)
+	gb.Get(COUNT_PATH+":code", h.Count)
 }
 
-func (h *FindShortHandler) Find(ctx gearbox.Context) {
+func (h *CountRedirectShortHandler) Count(ctx gearbox.Context) {
 
 	code := ctx.Param("code")
 
-	linkResult, err := h.FindLinkUseCase(entity.Link{
+	linkResult, err := h.CountLinkUseCase(entity.Link{
 		Code: code,
 	})
 
@@ -46,9 +46,9 @@ func (h *FindShortHandler) Find(ctx gearbox.Context) {
 		return
 	}
 
-	ctx.Status(gearbox.StatusOK).SendJSON(response.LinkResponse{
-		Url:  linkResult.ID,
-		Code: linkResult.Code,
+	ctx.Status(gearbox.StatusOK).SendJSON(response.CountResponse{
+		Count: linkResult.Count,
+		Code:  linkResult.Code,
 	})
 	return
 

@@ -37,6 +37,7 @@ func initDBMigrations(connection *gorm.DB) {
 
 	migrations := []interface{}{
 		&models.Link{},
+		&models.Counter{},
 	}
 
 	err := migrator.AutoMigrate(migrations...)

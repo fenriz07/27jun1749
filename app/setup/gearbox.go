@@ -22,5 +22,11 @@ func gearBox() gearbox.Gearbox {
 
 func setEndpoints(gb gearbox.Gearbox, v *validator.Validate, listUseCase usesCases) {
 
-	rest.NewCreateShortUrlHandler(gb, v, listUseCase.Launch)
+	rest.NewRedirectHandler(gb, listUseCase.RedirectLink.Launch)
+
+	rest.NewCreateShortUrlHandler(gb, v, listUseCase.SaveLink.Launch)
+	rest.NewFindShortUrlHandler(gb, listUseCase.FindLink.Launch)
+	rest.NewDeleteShortUrlHandler(gb, listUseCase.DeleteLink.Launch)
+	rest.NewCountRedirectUrlHandler(gb, listUseCase.CountLink.Launch)
+
 }

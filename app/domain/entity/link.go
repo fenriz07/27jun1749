@@ -1,8 +1,9 @@
 package entity
 
 type Link struct {
-	ID   string
-	Code string
+	ID    string
+	Code  string
+	Count int64
 }
 
 type entityLinkError string

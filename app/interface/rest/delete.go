@@ -9,24 +9,24 @@ import (
 	"github.com/gogearbox/gearbox"
 )
 
-type FindShortHandler struct {
-	usecase.FindLinkUseCase
+type DeleteShortHandler struct {
+	usecase.DeleteLinkUseCase
 }
 
-func NewFindShortUrlHandler(gb gearbox.Gearbox, u usecase.FindLinkUseCase) {
+func NewDeleteShortUrlHandler(gb gearbox.Gearbox, u usecase.DeleteLinkUseCase) {
 
-	h := &FindShortHandler{
-		FindLinkUseCase: u,
+	h := &DeleteShortHandler{
+		DeleteLinkUseCase: u,
 	}
 
-	gb.Get(BASE_PATH+":code", h.Find)
+	gb.Delete(BASE_PATH+":code", h.Delete)
 }
 
-func (h *FindShortHandler) Find(ctx gearbox.Context) {
+func (h *DeleteShortHandler) Delete(ctx gearbox.Context) {
 
 	code := ctx.Param("code")
 
-	linkResult, err := h.FindLinkUseCase(entity.Link{
+	err := h.DeleteLinkUseCase(entity.Link{
 		Code: code,
 	})
 
@@ -46,10 +46,7 @@ func (h *FindShortHandler) Find(ctx gearbox.Context) {
 		return
 	}
 
-	ctx.Status(gearbox.StatusOK).SendJSON(response.LinkResponse{
-		Url:  linkResult.ID,
-		Code: linkResult.Code,
-	})
+	ctx.Status(gearbox.StatusOK)
 	return
 
 }
