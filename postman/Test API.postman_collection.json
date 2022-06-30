@@ -68,7 +68,7 @@
 					"header": [
 						{
 							"key": "Date",
-							"value": "Thu, 30 Jun 2022 17:57:30 GMT"
+							"value": "Thu, 30 Jun 2022 19:53:55 GMT"
 						},
 						{
 							"key": "Content-Type",
@@ -80,7 +80,7 @@
 						}
 					],
 					"cookie": [],
-					"body": "{\n    \"url\": \"https://www.theguardian.com/international\",\n    \"code\": \"48673a20\"\n}"
+					"body": "{\n    \"url\": \"https://www.theguardian.com/international\",\n    \"code\": \"f2a13dbb\"\n}"
 				}
 			]
 		},
@@ -102,7 +102,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8080/api/short/url/ed2fc7c5",
+					"raw": "http://localhost:8080/api/short/url/f2a13dbb",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -112,7 +112,7 @@
 						"api",
 						"short",
 						"url",
-						"ed2fc7c5"
+						"f2a13dbb"
 					]
 				}
 			},
@@ -132,7 +132,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/api/short/url/ed2fc7c5",
+							"raw": "http://localhost:8080/api/short/url/f2a13dbb",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -142,7 +142,7 @@
 								"api",
 								"short",
 								"url",
-								"ed2fc7c5"
+								"f2a13dbb"
 							]
 						}
 					},
@@ -152,7 +152,7 @@
 					"header": [
 						{
 							"key": "Date",
-							"value": "Thu, 30 Jun 2022 17:48:37 GMT"
+							"value": "Thu, 30 Jun 2022 19:54:42 GMT"
 						},
 						{
 							"key": "Content-Type",
@@ -160,11 +160,11 @@
 						},
 						{
 							"key": "Content-Length",
-							"value": "166"
+							"value": "69"
 						}
 					],
 					"cookie": [],
-					"body": "{\n    \"url\": \"https://github.com/\",\n    \"code\": \"ed2fc7c5\"\n}"
+					"body": "{\n    \"url\": \"https://www.theguardian.com/international\",\n    \"code\": \"f2a13dbb\"\n}"
 				},
 				{
 					"name": "Not found",
@@ -181,7 +181,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/api/short/url/ed2fc7c5",
+							"raw": "http://localhost:8080/api/short/url/notf",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -191,7 +191,7 @@
 								"api",
 								"short",
 								"url",
-								"ed2fc7c5"
+								"notf"
 							]
 						}
 					},
@@ -201,7 +201,7 @@
 					"header": [
 						{
 							"key": "Date",
-							"value": "Thu, 30 Jun 2022 17:54:41 GMT"
+							"value": "Thu, 30 Jun 2022 19:54:53 GMT"
 						},
 						{
 							"key": "Content-Type",
@@ -349,7 +349,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/api/short/count/48673a20",
+					"raw": "http://localhost:8080/api/short/count/f2a13dbb",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -359,7 +359,7 @@
 						"api",
 						"short",
 						"count",
-						"48673a20"
+						"f2a13dbb"
 					]
 				}
 			},
@@ -370,7 +370,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/api/short/count/48673a20",
+							"raw": "http://localhost:8080/api/short/count/f2a13dbb",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -380,7 +380,7 @@
 								"api",
 								"short",
 								"count",
-								"48673a20"
+								"f2a13dbb"
 							]
 						}
 					},
@@ -390,7 +390,7 @@
 					"header": [
 						{
 							"key": "Date",
-							"value": "Thu, 30 Jun 2022 19:34:12 GMT"
+							"value": "Thu, 30 Jun 2022 19:55:21 GMT"
 						},
 						{
 							"key": "Content-Type",
@@ -402,7 +402,7 @@
 						}
 					],
 					"cookie": [],
-					"body": "{\n    \"count\": 0,\n    \"code\": \"48673a20\"\n}"
+					"body": "{\n    \"count\": 1,\n    \"code\": \"f2a13dbb\"\n}"
 				}
 			]
 		}
