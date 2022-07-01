@@ -2,6 +2,20 @@
 <h1 align="center">Shortened service</h1>
 </p>
 
+## This service can do:
+ - Create,read and delete shortened URLs.
+ - Redirect the shortned URL to original
+ - Counts the redirects made
+ - Show the total counter per redirect
+
+## Tecnical Details
+ - Programming language: Go 1.15
+ - Web Framework: Gearbox :gear:
+ - ORM Library: Gorm
+ - Database: PostgreSQL
+ - Log: ZeroLog
+
+
 ## Pattern to the service
 
 ![image](https://user-images.githubusercontent.com/9199380/176738028-bdd6ebfe-4108-448c-89a0-962f3235be90.png)
@@ -39,9 +53,8 @@ docker run -dp 8080:8080 yourbuildname
 
 Open your postman or another favorite client, read the documentation and enjoy.
 
-## This service can do:
- - Create,read and delete shortened URLs.
- - Redirect the shortned URL to original
- - Counts the redirects made
- - Show the total counter per redirect
-
+## Next Features:
+ - Cache with redis
+ - Observability and traceability with Datadog (LOG y APM)
+ - Unit Testing
+ - A new interface with gRPC
