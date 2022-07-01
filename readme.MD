@@ -1,3 +1,7 @@
+<p align="center">
+<h1 align="center">Shortened service</h1>
+</p>
+
 ## Pattern to the service
 
 ![image](https://user-images.githubusercontent.com/9199380/176738028-bdd6ebfe-4108-448c-89a0-962f3235be90.png)
