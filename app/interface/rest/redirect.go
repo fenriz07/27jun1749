@@ -36,5 +36,5 @@ func (h *RedirectHandler) Redirect(ctx gearbox.Context) {
 		return
 	}
 
-	ctx.Context().Redirect(l.ID, 301)
+	ctx.Context().Redirect(l.ID, 302)
 }
