@@ -29,7 +29,7 @@
 
 You can access to the documentation for the next url: http://localhost:8080/ce99870d
 
-## Considerarion to the api
+## API Consideration
 
 ### Postman Collection
 In the folder postman there is a postman collection that you could use.
