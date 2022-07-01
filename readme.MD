@@ -35,3 +35,9 @@ docker run -dp 8080:8080 yourbuildname
 
 Open your postman or another favorite client, read the documentation and enjoy.
 
+## This service can do:
+ - Create,read and delete shortened URLs.
+ - Redirect the shortned URL to original
+ - Counts the redirects made
+ - Show the total counter per redirect
+
